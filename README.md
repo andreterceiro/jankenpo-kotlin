@@ -11,6 +11,7 @@ sudo apt install kotlin -y
 Then I compiled a test (`tests/manuals/index.kt`) using this command:
 
 ```
+cd tests/manuals
 kotlinc -include-runtime index.kt -d index.jar
 ```
 
