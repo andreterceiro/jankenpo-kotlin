@@ -2,7 +2,7 @@
 
 ## Installation
 
-I installed Kotlin using `apt`:
+I installed Kotlin using `apt` on `Ubuntu 23`:
 
 ```
 sudo apt install kotlin -y
