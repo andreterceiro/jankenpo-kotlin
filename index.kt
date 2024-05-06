@@ -1,5 +1,6 @@
 import java.util.Scanner
 import kotlin.system.exitProcess
+import java.util.Random
 
 fun main() {
     println("\nJankenpo!")
@@ -22,8 +23,16 @@ fun main() {
 }
 
 fun getRandomComputerChoice(): String {
-    return "paper"
-}
+    val randomIntComputerChoice = Random().nextInt(2)
+    
+    // prints new sequence every time
+    if (randomIntComputerChoice.equals(0)) {
+        return "paper"
+    } else if (randomIntComputerChoice.equals(1)) {
+        return "rock"
+    }
+    return "scissors"
+}   
 
 fun getUserChoice(): String {
     val scan = Scanner(System.`in`)
