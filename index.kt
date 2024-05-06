@@ -1,13 +1,28 @@
 import java.util.Scanner
+import kotlin.system.exitProcess
+
 fun main() {
     println("\nJankenpo!")
     println("=======================")
     var userChoice = getUserChoice()
-    println(userChoice)
+    var computerChoice = getRandomComputerChoice()
+    
+    println("")
+
+    if ( (userChoice.equals("paper") && computerChoice.equals("rock")) || (userChoice.equals("rock") && computerChoice.equals("scissors")) || (userChoice.equals("scissors") && computerChoice.equals("paper"))) {
+        println("User win")
+    } else if (userChoice.equals(computerChoice)) {
+        println("Draw")
+    } else {
+        println("Computer win")
+    }
+
+    println("User selected: $userChoice")
+    println("Computer selected: $computerChoice")
 }
 
 fun getRandomComputerChoice(): String {
-    return "1"
+    return "paper"
 }
 
 fun getUserChoice(): String {
@@ -23,5 +38,6 @@ fun getUserChoice(): String {
     } else if (userChoice.equals("s")) {
         return "scissors"
     }
-    return "You must enter 'p', 'r' or 's'"
+    println("You must enter 'p', 'r' or 's'\n")
+    exitProcess(-1)
 }
