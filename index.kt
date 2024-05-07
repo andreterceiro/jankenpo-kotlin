@@ -8,10 +8,8 @@ fun main() {
     var userChoice = getUserChoice()
     var computerChoice = getRandomComputerChoice()
     
-    println("")
-
     if ( (userChoice.equals("paper") && computerChoice.equals("rock")) || (userChoice.equals("rock") && computerChoice.equals("scissors")) || (userChoice.equals("scissors") && computerChoice.equals("paper"))) {
-        println("User win")
+        println("\nUser win")
     } else if (userChoice.equals(computerChoice)) {
         println("Draw")
     } else {
@@ -23,9 +21,8 @@ fun main() {
 }
 
 fun getRandomComputerChoice(): String {
-    val randomIntComputerChoice = Random().nextInt(2)
+    val randomIntComputerChoice = Random(System.currentTimeMillis()).nextInt(3)
     
-    // prints new sequence every time
     if (randomIntComputerChoice.equals(0)) {
         return "paper"
     } else if (randomIntComputerChoice.equals(1)) {
