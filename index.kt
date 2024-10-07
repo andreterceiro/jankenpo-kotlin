@@ -5,8 +5,8 @@ import java.util.Random
 fun main() {
     println("\nJankenpo!")
     println("=======================")
-    var userChoice = getUserChoice()
-    var computerChoice = getRandomComputerChoice()
+    val userChoice = getUserChoice()
+    val computerChoice = getRandomComputerChoice()
     
     if ( (userChoice.equals("paper") && computerChoice.equals("rock")) || (userChoice.equals("rock") && computerChoice.equals("scissors")) || (userChoice.equals("scissors") && computerChoice.equals("paper"))) {
         println("\nUser win")
