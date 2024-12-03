@@ -8,7 +8,7 @@ I installed Kotlin using `apt` on `Ubuntu 23`:
 sudo apt install kotlin -y
 ```
 
-Then I compiled a test (`tests/manuals/index.kt`) using this command:
+Then I generated a JAR file to test (of the file `tests/manuals/index.kt`) using this command:
 
 ```
 cd tests/manuals
